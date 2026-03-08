@@ -9,3 +9,5 @@ Working entirely in the console. You can enter any text to simulate "cataracts".
 
 1. Make sure you have **Python 3** installed
 2. Download or clone this repository
+
+NOTE: This is text-only, so it cannot truly represent cataract vision!!
