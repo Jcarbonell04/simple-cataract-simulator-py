@@ -1,6 +1,4 @@
-def main():
-    print("Hello from simple-cataract-sim-text!")
-
-
-if __name__ == "__main__":
-    main()
+# Beginner Text Cataract Visualizer
+# This is a text only version. It is not realistic for actual vision
+# Designed as a learning project to understand image/text processing in Python
+# Author: Jaedyn Carbonell
