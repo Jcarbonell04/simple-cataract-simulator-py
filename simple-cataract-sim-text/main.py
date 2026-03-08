@@ -6,9 +6,9 @@
 def blur_text(text, severity=1):
     """
     Add spaces after letters to simulate blur
-    :param text:
-    :param severity:
-    :return:
+    :param text: The input text to blur
+    :param severity: How strong the "blur" is/number of spaces after each letter
+    :return: The blurred text
     """
     newText = ""
     for char in text:
@@ -20,9 +20,9 @@ def blur_text(text, severity=1):
 def haze_text(text, severity=1):
     """
     Replace some letters with dots to simulate haze/faded vision
-    :param text:
-    :param severity:
-    :return:
+    :param text: The input text to haze
+    :param severity: How many letters to replace with dots
+    :return: The hazy text
     """
     newText = ""
     for char in text:
@@ -36,12 +36,12 @@ def haze_text(text, severity=1):
 def simulate_cataract(text, severity=1):
     """
     Combine blur and haze for a simple cataract effect
-    :param text:
-    :param severity:
-    :return:
+    :param text: The input text
+    :param severity: Severity of the cataract effect from 1 to 5
+    :return: Text with simulated cataract
     """
     blurred = blur_text(text, severity)
-    hazy = haze_text(blurred, severity * 2)  # more haze as severity increases
+    hazy = haze_text(blurred, severity * 2)  # more haze if severity is larger
     return hazy
 
 if __name__ == "__main__":
