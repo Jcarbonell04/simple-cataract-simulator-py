@@ -46,17 +46,30 @@ def simulate_cataract(text, severity=1):
 
 if __name__ == "__main__":
     print("Text Cataract Simulator")
-    userText = input("Enter the text you want to simulate: ")
-    while True:
-        try:
-            severity = int(input("Enter severity (1-5, 1 = mild, 5 = strong): "))
-            if 1 <= severity <= 5:
-                break
-            else:
-                print("Please enter a number between 1 and 5.")
-        except ValueError:
-            print("Please enter a valid number.")
+    print()
 
-    simulated = simulate_cataract(userText, severity)
-    print("\nNormal Vision:    ", userText)
-    print("Simulated Cataract:", simulated)
+    while True:
+        # get text input
+        userText = input("Enter the text you want to simulate (or type 'quit' to exit): ") or "default text for testing"
+        if userText.lower() == "q":
+            print("Exiting program")
+            break
+
+        # data validation
+        while True:
+            try:
+                severity = int(input("Enter severity (1-5, 1 = mild, 5 = strong): "))
+                if 1 <= severity <= 5:
+                    break
+                else:
+                    print("Please enter a number between 1 and 5")
+            except Exception as e:
+                print(f"Error: {e}")
+                print("Please enter a valid number within range of 1 and 5")
+
+        # apply cataract text effect
+        simulated = simulate_cataract(userText, severity)
+
+        # print results
+        print("\nNormal Vision:     ", userText)
+        print("Simulated Cataract:", simulated)
